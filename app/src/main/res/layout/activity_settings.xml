@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingsActivity">
+
+    <RadioGroup
+        android:id="@+id/radioButtonFirstPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFirstPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstPlayer">
+
+        <RadioButton
+            android:id="@+id/radioButtonSPX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSPY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Tic-Tac"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextFirstPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="First player"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextSecondPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Second player"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFirstPlayer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFirstPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonFirstPlayer" />
+
+    <RadioGroup
+        android:id="@+id/radioButtonSecondPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSecondPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSecondPlayer">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioButtonPlayerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerDiff"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonSecondPlayer">
+
+        <RadioButton
+            android:id="@+id/radioButtonOnePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="One player" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTwoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Two player" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/difficulties"
+        app:layout_constraintBottom_toBottomOf="@+id/radioButtonPlayerCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonPlayerCount"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonPlayerCount" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPlayerCount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

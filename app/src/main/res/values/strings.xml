@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tic Tac</string>
+    <string-array name="difficulties">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Impossible</item>
+    </string-array>
+</resources>
